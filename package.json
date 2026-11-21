@@ -40,6 +40,7 @@
     "examples/*.yml",
     "requirements.txt",
     "README.md",
+    "INSTALL_PROMPT.md",
     "CHANGELOG.md",
     "LICENSE"
   ],

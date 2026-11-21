@@ -1,6 +1,7 @@
 # 🎙 Русский голосовой ввод для DeepSeek Harness
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Install with AI](https://img.shields.io/badge/install%20with-AI%20prompt-blueviolet)](INSTALL_PROMPT.md)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![faster-whisper](https://img.shields.io/badge/ASR-faster--whisper-orange.svg)](https://github.com/SYSTRAN/faster-whisper)
 [![Offline](https://img.shields.io/badge/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-%D0%BE%D1%84%D0%BB%D0%B0%D0%B9%D0%BD-brightgreen.svg)](#офлайн-режим)
@@ -83,6 +84,21 @@ flowchart LR
    скачивается модель (~464 МБ). Пока идёт подготовка, кнопка показывает «Распознавание ещё готовится».
 
 4. Нажмите микрофон и говорите. Кнопка ещё раз — закончить диктовку.
+
+### Установка через промпт
+
+Если не хочется клонировать и включать бандл вручную, отдайте установку ИИ-агенту
+DeepSeek Harness. Вставьте в чат:
+
+```text
+Установи плагин русского голосового ввода по инструкции:
+https://github.com/fiast/deepseek-harness-russian-voice-input/blob/main/INSTALL_PROMPT.md
+```
+
+Агент сам склонирует репозиторий в `~/.dsh/bundles/ru-voice-input`, установит бандл через
+Plugin Manager, дождётся загрузки модели и проверит, что кнопка микрофона зарегистрирована.
+Полный текст с шагами, проверками и разбором ошибок — в [`INSTALL_PROMPT.md`](INSTALL_PROMPT.md).
+Потребуется разрешение на установку бандла.
 
 ### Обновление
 
@@ -174,6 +190,7 @@ git pull
 | `locale/*.json` | Название и описание плагина для Plugin Manager |
 | `icon.svg` | Иконка плагина |
 | `examples/cordis.patch.yml` | Пример конфигурации |
+| `INSTALL_PROMPT.md` | Готовый промпт: агент сам устанавливает плагин в другом DSH |
 | `requirements.txt` | Зависимости для ручной установки |
 
 ### API плагина

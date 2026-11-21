@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "俄语语音输入（faster-whisper）",
+    "description": "使用 faster-whisper 进行俄语本地语音识别：输入框旁的麦克风按钮录音、在主机上转写，并将文字插入草稿而不发送。"
+  }
+}

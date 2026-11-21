@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Local runtime data: models and caches never belong in the repository
+models/
+hf/
+runtime-ready.json
+
+# Test audio
+*.mp3
+*.wav
+*.ogg
+*.webm
+*.opus
+
+# Logs and dumps
+*.log
+*.tmp
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

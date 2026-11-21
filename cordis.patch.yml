@@ -1,0 +1,3 @@
+- insert:
+    - id: ru-voice-input
+      name: '@local/ru-voice-input'

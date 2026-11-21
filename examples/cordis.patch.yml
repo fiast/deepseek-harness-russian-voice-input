@@ -1,0 +1,21 @@
+# Пример настройки плагина.
+# Скопируйте строку в $DSH_HOME/profiles/<профиль>/cordis.patch.yml.
+# Все поля необязательны — без настроек плагин работает с значениями по умолчанию.
+
+- id: ru-voice-input
+  config:
+    # Модель faster-whisper: tiny | base | small | medium.
+    # small — рекомендуемый баланс точности и скорости для русского.
+    model: small
+
+    # Число потоков CPU. 0 — авто (до 8). На гибридных CPU больше 8 обычно медленнее.
+    threads: 8
+
+    # 1 — жадное декодирование (быстро), 5 — beam search (немного точнее).
+    beamSize: 1
+
+    # Каталог для venv и кэша модели. По умолчанию ~/.dsh/plugin-data/ru-voice.
+    # dataRoot: D:\dsh-data\ru-voice
+
+    # Интерпретатор Python 3, если автопоиск не находит подходящий.
+    # pythonPath: C:\Python312\python.exe

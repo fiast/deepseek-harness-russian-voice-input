@@ -1,0 +1,54 @@
+{
+  "name": "@local/ru-voice-input",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Russian speech recognition for DeepSeek Harness: phrase-streaming dictation with faster-whisper on the Host, MediaRecorder in the browser, no auto-send.",
+  "license": "MIT",
+  "author": "fiast",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "speech-to-text",
+    "russian",
+    "whisper",
+    "faster-whisper",
+    "dictation",
+    "offline"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiast/deepseek-harness-russian-voice-input.git"
+  },
+  "homepage": "https://github.com/fiast/deepseek-harness-russian-voice-input#readme",
+  "bugs": {
+    "url": "https://github.com/fiast/deepseek-harness-russian-voice-input/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "transcribe.py",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "examples/*.yml",
+    "requirements.txt",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

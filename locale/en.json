@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Russian Voice Input (faster-whisper)",
+    "description": "Local Russian speech recognition with faster-whisper: a microphone button beside the composer that records, transcribes on the Host and inserts the text into the draft without sending it."
+  }
+}
